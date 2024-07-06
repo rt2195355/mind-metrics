@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Playground from './components/Playground'
 import Navbar from './components/Navbar'
-import ReactionTime from './components/ReactionTime'
-
+import Home from './components/Home'
 
 const App = () => {
+  const [selectedGame, setSelectedGame] = useState('Home');
   return (
     <div>
-      <Navbar />
-      <Playground>
-        <Card />
-      </Playground>
+      <Navbar selectedGame={selectedGame} onChange={setSelectedGame} />
+
+      {
+        selectedGame === ('Home') ?
+          <>
+            <Home selectedGame={selectedGame} onChange={setSelectedGame} />
+          </> : <Playground selectedGame={selectedGame} />
+      }
     </div>
   )
 }
-
-export default App
+export default App;

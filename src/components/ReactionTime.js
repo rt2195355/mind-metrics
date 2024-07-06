@@ -16,20 +16,21 @@ const ReactionTime = () => {
             setStyle({ backgroundColor: "red" });
         }, randomNumber);
         setTimeoutId(id);
-
-        // Clear timeout on component unmount or when dependency changes
         return () => {
             if (timeoutId) {
                 clearTimeout(timeoutId);
             }
         };
-    }, []); // Empty dependency array ensures this effect runs only once on mount
+    }, []);
 
     const handleClick = () => {
         if (!hasClicked) {
             const end = new Date();
             if (style.backgroundColor !== "red") {
                 setPrematureClick(true);
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
             } else {
                 setLapse(end - start);
             }
