@@ -50,3 +50,5 @@ const englishWords = [
     "swimming", "cycling", "running", "boxing", "wrestling", "skiing", "snowboarding", "surfing", "skateboarding", "climbing",
     "karate", "judo", "taekwondo", "badminton", "table tennis", "fencing", "archery", "gymnastics", "rowing", "weightlifting",
     "science", "mathematics", "biology", "chemistry", "physics", "geology"];
+
+export default englishWords;

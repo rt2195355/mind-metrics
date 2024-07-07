@@ -1,6 +1,6 @@
 .window {
-  width: 40rem;
-  height: 40rem;
+  min-width: 40vh;
+  height: 40vh;
   border-radius: 2rem;
   border: 0.5rem solid rgb(98, 96, 96);
   cursor: pointer;
@@ -13,7 +13,7 @@
 }
 .headings {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 .btn {

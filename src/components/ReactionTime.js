@@ -53,7 +53,7 @@ const ReactionTime = () => {
             {hasClicked ? (
                 <>
                     <h1 className='headings'>
-                        {prematureClick ? "Clicked too soon!" : `Reaction time: ${lapse} milliseconds`}
+                        {prematureClick ? "Clicked too soon!" : `Reaction time: ${lapse} ms`}
                     </h1>
                     <button className="btn" onClick={handlePlayAgain}>Play Again</button>
                 </>
