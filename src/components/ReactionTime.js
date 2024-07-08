@@ -21,7 +21,7 @@ const ReactionTime = () => {
                 clearTimeout(timeoutId);
             }
         };
-    }, []);
+    }, [randomNumber]);
 
     const handleClick = () => {
         if (!hasClicked) {
